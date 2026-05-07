@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindAR + A-Frame Animation AR</title>
+  
+  <!-- CSSの読み込み -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 1. A-Frame本体 -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <!-- 2. MindARのA-Frame用ライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  <!-- 3. GLBのアニメーション再生に必要なA-Frame Extras -->
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+
+  <!-- ARシーンの設定。imageTargetSrcに .mind ファイルを指定 -->
+  <a-scene 
+    mindar-image="imageTargetSrc: ./logo.mind;" 
+    color-space="sRGB" 
+    renderer="colorManagement: true, physicallyCorrectLights" 
+    vr-mode-ui="enabled: false" 
+    device-orientation-permission-ui="enabled: false">
+    
+    <!-- アセットの事前読み込み -->
+    <a-assets>
+      <a-asset-item id="avatarModel" src="./animyuko_mini.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- AR用のカメラ設定 -->
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <!-- ターゲット画像（0番目のマーカー）を認識した時の表示エンティティ -->
+    <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
+      
+      <!-- 
+        3Dモデルの配置 
+        animation-mixer: アニメーションを再生させるための属性
+        scale, position, rotation はモデルのサイズに合わせて適宜調整してください
+      -->
+      <a-gltf-model 
+        id="avatar" 
+        src="#avatarModel" 
+        position="0 0 0" 
+        rotation="0 0 0" 
+        scale="0.5 0.5 0.5" 
+        animation-mixer>
+      </a-gltf-model>
+
+    </a-entity>
+  </a-scene>
+
+  <!-- JavaScriptの読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
