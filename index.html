@@ -19,7 +19,7 @@
 
   <!-- ARシーンの設定。imageTargetSrcに .mind ファイルを指定 -->
   <a-scene 
-    mindar-image="imageTargetSrc: ./logo.mind; filterMinCF: 0.00001; filterBeta: 0.00001;" 
+    mindar-image="imageTargetSrc: ./logo.mind; filterMinCF: 0.0001; filterBeta: 0.0001;" 
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights" 
     vr-mode-ui="enabled: false" 
@@ -45,7 +45,7 @@
         id="avatar" 
         src="#avatarModel" 
         position="0 0 0" 
-        rotation="0 0 0" 
+        rotation="90 0 0" 
         scale="1.0 1.0 1.0 " 
         animation-mixer>
       </a-gltf-model>
