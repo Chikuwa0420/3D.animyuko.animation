@@ -36,19 +36,16 @@
     <!-- ターゲット画像（0番目のマーカー）を認識した時の表示エンティティ -->
     <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
       
-      <!-- 
-        3Dモデルの配置 
-        animation-mixer: アニメーションを再生させるための属性
-        scale, position, rotation はモデルのサイズに合わせて適宜調整してください
-      -->
+      <!--3Dモデルの配置 -->
+
       <a-gltf-model 
-        id="avatar" 
-        src="#avatarModel" 
-        position="0 0 0" 
-        rotation="90 0 0" 
-        scale="1.0 1.0 1.0 " 
-        animation-mixer>
-      </a-gltf-model>
+  id="avatar" 
+  src="#avatarModel" 
+  position="0 0 0" 
+  rotation="90 0 0" 
+  scale="1.0 1.0 1.0" 
+  animation-mixer="clip: action.save|shape.save; loop: repeat; useRegExp: true;">
+</a-gltf-model>
 
     </a-entity>
   </a-scene>
