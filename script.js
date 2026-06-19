@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const avatar = document.querySelector('#avatar');
   
   // 今後追加していくアニメーションのアクション名を配列に格納
-  const animations = ['save_combined', 'head_combined']; 
+  const animations = ['head_combined', 'save_combined']; 
   
   // 現在再生しているアニメーションの配列インデックス
   let currentAnimationIndex = 0;
