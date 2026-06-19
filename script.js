@@ -92,4 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});-->
+});
