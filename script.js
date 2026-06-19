@@ -1,19 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const modelViewer = document.querySelector('#ar-viewer');
-
-    // --- ここから追加（確認用コード） ---
-    modelViewer.addEventListener('load', () => {
-        // モデルに収録されている全てのアニメーション名を取得して配列にする
-        const animations = modelViewer.availableAnimations;
-        
-        // 開発者ツールのコンソールに表示
-        console.log("【収録アニメーション一覧】", animations);
-        
-        // 画面にポップアップ（アラート）で表示
-        alert("モデル内のアニメーション:\n" + animations.join("\n"));
-    });
-    
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
   // ターゲットエンティティとアバターエンティティの取得
   const target = document.querySelector('#ar-target');
@@ -49,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("マーカーを見失いました。");
   });
 });
+*/
 
-/*
 document.addEventListener("DOMContentLoaded", () => {
   const target = document.querySelector('#ar-target');
   const avatar = document.querySelector('#avatar');
@@ -109,4 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});*/
+});
