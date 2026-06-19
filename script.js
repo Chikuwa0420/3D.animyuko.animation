@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // ターゲットエンティティとアバターエンティティの取得
   const target = document.querySelector('#ar-target');
   const avatar = document.querySelector('#avatar');
@@ -32,8 +32,9 @@
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});*/
+});
 
+/*
 document.addEventListener("DOMContentLoaded", () => {
   const target = document.querySelector('#ar-target');
   const avatar = document.querySelector('#avatar');
@@ -92,4 +93,4 @@ document.addEventListener("DOMContentLoaded", () => {
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});
+});*/
