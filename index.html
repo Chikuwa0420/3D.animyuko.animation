@@ -41,14 +41,20 @@
         animation-mixer: アニメーションを再生させるための属性
         scale, position, rotation はモデルのサイズに合わせて適宜調整してください
       -->
-      <a-gltf-model 
+     <!-- <a-gltf-model 
         id="avatar" 
         src="#avatarModel" 
         position="0 0 0" 
         rotation="90 0 0" 
         scale="1.0 1.0 1.0 " 
         animation-mixer="clip: save.action; loop: repeat;">
-      </a-gltf-model>
+      </a-gltf-model>-->
+
+      <a-gltf-model 
+  id="avatar" 
+  src="#avatarModel" 
+  animation-mixer="clip: *; loop: repeat;">
+</a-gltf-model>
 
     </a-entity>
   </a-scene>
