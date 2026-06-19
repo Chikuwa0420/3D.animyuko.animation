@@ -1,11 +1,11 @@
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
   // ターゲットエンティティとアバターエンティティの取得
   const target = document.querySelector('#ar-target');
   const avatar = document.querySelector('#avatar');
   
   // 今後追加していくアニメーションのアクション名を配列に格納
-  const animations = ['save.shape', 'head.shape'];
+  const animations = ['save_combined', 'head_combined']; 
   
   // 現在再生しているアニメーションの配列インデックス
   let currentAnimationIndex = 0;
@@ -34,7 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("マーカーを見失いました。");
   });
 });
-*/
+
+/*
+
+<<< デバッグ用コード（GLB内のアニメーション名を画面に表示する） >>>
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const target = document.querySelector('#ar-target');
@@ -94,4 +98,4 @@ document.addEventListener("DOMContentLoaded", () => {
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});
+});*/
