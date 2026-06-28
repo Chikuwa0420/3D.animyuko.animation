@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // ターゲットエンティティとアバターエンティティの取得
   const target = document.querySelector('#ar-target');
@@ -10,8 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // 現在再生しているアニメーションの配列インデックス
   let currentAnimationIndex = 0;
 
-  // 画面がクリック（またはタップ）された時のイベント
-  window.addEventListener('click', () => {
+  // ×ボタンを押した時のイベント
+  const closeBtn = document.getElementById('close-btn');
+  const overlay = document.getElementById('instruction-overlay');
+  
+  if (closeBtn && overlay) {
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none'; // 画面から消す
+    });
+  }
+
+  // 画面がクリックされた時のイベント
+  window.addEventListener('click', (event) => {
+    // ×ボタンやオーバーレイ自体をクリックした時はアニメーションを切り替えないようにする
+    if (event.target.id === 'close-btn' || event.target.classList.contains('overlay-img')) {
+      return; 
+    }
+
     // インデックスを1進める
     currentAnimationIndex = (currentAnimationIndex + 1) % animations.length;
     
@@ -98,4 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
   target.addEventListener("targetLost", event => {
     console.log("マーカーを見失いました。");
   });
-});*/
+});  */
