@@ -17,6 +17,13 @@
 </head>
 <body>
 
+<!-- 操作説明・マーカーの画像 -->
+  <div id="instruction-overlay">
+    <button id="close-btn">×</button>
+    <img src="picture/AR.explain.jpg" alt="AR説明" class="overlay-img">
+    <img src="picture/marker.png" alt="マーカー" class="overlay-img">
+  </div>
+
   <!-- ARシーンの設定。imageTargetSrcに .mind ファイルを指定 -->
   <a-scene 
     mindar-image="imageTargetSrc: ./logo.mind; filterMinCF: 0.0005; filterBeta: 0.0005;" 
